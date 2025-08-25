@@ -4,6 +4,9 @@ import React from "react";
 import { useFavourites } from "@/app/hooks/usefavourites";
 import { MovieCard } from "../components/MovieCard";
 
+export const config = {
+  dynamic: "force-dynamic"
+};
 export default function FavouritesPage() {
   const { favourites } = useFavourites();
 

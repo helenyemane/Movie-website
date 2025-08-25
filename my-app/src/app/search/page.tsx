@@ -4,6 +4,7 @@ import React from "react";
 import { useSearch } from "../hooks/useSearch";
 import { MovieCard } from "@/components/MovieCard";
 
+
 export default function SearchPage() {
   const { query, setQuery, results, handleSearch } = useSearch();
 

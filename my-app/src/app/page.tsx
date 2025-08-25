@@ -4,7 +4,7 @@ import { Movie } from "./utils/type";
 import MovieHero from "@/components/MovieHero";
 import Footer from "./footer/footer";
 
-export const revalidate = 60 * 60; 
+export const revalidate = 3600;
 
 async function fetchMovies() {
   const latestMovies = await fetchTmdb("/movie/now_playing");
@@ -25,9 +25,8 @@ export default async function HomePage() {
     await fetchMovies();
 
   return (
-    
     <main style={{ padding: 20 }}>
-      <MovieHero/>
+      <MovieHero />
       <h1>Latest Movies</h1>
       <div style={{ display: "flex", overflowX: "auto" }}>
         {latestMovies.map((movie: Movie) => (
@@ -55,7 +54,7 @@ export default async function HomePage() {
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </main>
   );
 }

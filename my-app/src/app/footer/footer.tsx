@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+
+
 export default function Footer() {
   return (
     <footer className="bg-[#0B0B10] text-white mt-20">
